@@ -1,15 +1,17 @@
 package com.galt.java.taskgenerator.ui;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by vladislav on 2/15/15.
  */
-public class Screen extends JFrame {
+public abstract class Screen extends JFrame implements Canvas.OnDrawListener {
     private Canvas canvas;
 
     public Screen(Canvas canvas) {
         this.canvas = canvas;
+        canvas.setOnDrawListener(this);
         initUi();
     }
 
