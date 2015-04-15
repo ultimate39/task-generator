@@ -1,7 +1,8 @@
 package com.galt.java.taskgenerator.ui;
 
-import com.galt.java.taskgenerator.core.Floor;
+import com.galt.java.taskgenerator.core.model.Floor;
 
+import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -13,11 +14,23 @@ public class FloorScreen extends Screen {
     public FloorScreen(Floor floor, Canvas canvas) {
         super(canvas);
         this.floor = floor;
+        setFocusable(true);
+        setFocusTraversalKeysEnabled(false);
     }
 
     @Override
     public void render(Graphics2D g) {
-        floor.render(g);
+        if(floor != null) {
+            floor.render(g);
+        }
     }
 
+    public void changeFloor(Floor floor) {
+        this.floor = floor;
+        revalidate();
+        repaint();
+        canvas.clear();
+        canvas.revalidate();
+        canvas.repaint();
+    }
 }

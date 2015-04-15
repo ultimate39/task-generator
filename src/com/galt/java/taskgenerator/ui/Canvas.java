@@ -32,11 +32,31 @@ public class Canvas extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g;
         if (onDrawListener != null) {
-            onDrawListener.render((Graphics2D) image.getGraphics());
+            System.out.println("Draw scene");
+            onDrawListener.render(g2d);
         }
-        g.drawImage(image, 0, 0, null);
-        System.out.println("paintComponent");
+        /*Random r = new Random();
+
+        image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = (Graphics2D) image.getGraphics();
+        g2.setColor(new Color(r.nextInt(256), r.nextInt(256), r.nextInt(256)));
+        g2.fillRect(0, 0, 700, 400);*/
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        Graphics2D g2d = (Graphics2D) g;
+        if (onDrawListener != null) {
+            System.out.println("Draw scene");
+            onDrawListener.render(g2d);
+        }
+    }
+
+    protected void clear() {
+    //    image.getGraphics().fillRect(0, 0, WIDTH, HEIGHT);
     }
 
     @Override
@@ -50,9 +70,5 @@ public class Canvas extends JPanel {
 
     public interface OnDrawListener {
         public void render(Graphics2D g);
-    }
-
-    public Graphics2D getGraphics() {
-        return (Graphics2D) image.getGraphics();
     }
 }

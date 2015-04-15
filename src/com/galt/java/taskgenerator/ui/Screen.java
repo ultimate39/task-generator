@@ -7,7 +7,7 @@ import java.awt.*;
  * Created by vladislav on 2/15/15.
  */
 public abstract class Screen extends JFrame implements Canvas.OnDrawListener {
-    private Canvas canvas;
+    protected Canvas canvas;
 
     public Screen(Canvas canvas) {
         this.canvas = canvas;
@@ -18,7 +18,8 @@ public abstract class Screen extends JFrame implements Canvas.OnDrawListener {
     private void initUi() {
         setTitle("Screen");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        add(canvas);
+        Container content = getContentPane();
+        content.add(canvas);
         setSize(canvas.getCanvasWidth(), canvas.getCanvasHeight());
         setLocationRelativeTo(null);
     }
