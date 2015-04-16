@@ -36,6 +36,14 @@ public class Floor extends Chunk {
             chunk.setName("C" + index);
             chunk.render(g);
         }
+
+        for(Block block : blocks) {
+            index++;
+            block.setName("B" + index);
+            block.render(g);
+        }
+
+        System.out.println(toString());
 /*
         for(Hall hall : halls) {
             hall.render(g);

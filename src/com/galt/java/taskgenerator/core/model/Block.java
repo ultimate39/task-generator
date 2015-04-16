@@ -15,9 +15,9 @@ public class Block extends Chunk {
     public void render(Graphics2D g) {
         g.setStroke(new BasicStroke(5));
         g.setColor(Color.BLACK);
-        g.drawRect(x, y, x2, y2);
-
+        g.drawRect(x * SQUARE_SIZE, y * SQUARE_SIZE, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
+        if (name != null) {
+            g.drawString(name, (x + getWidth() / 2 ) * SQUARE_SIZE, (y2 - getHeight() / 2) * SQUARE_SIZE);
+        }
     }
-
-
 }

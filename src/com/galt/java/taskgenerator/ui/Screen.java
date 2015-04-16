@@ -15,7 +15,7 @@ public abstract class Screen extends JFrame implements Canvas.OnDrawListener {
         initUi();
     }
 
-    private void initUi() {
+    protected void initUi() {
         setTitle("Screen");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container content = getContentPane();

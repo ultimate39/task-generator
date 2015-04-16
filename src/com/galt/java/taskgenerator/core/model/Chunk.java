@@ -17,7 +17,6 @@ public class Chunk {
     }
 
     String name;
-
     public void setName(String name) {
         this.name = name;
     }
@@ -26,7 +25,6 @@ public class Chunk {
         g.setStroke(new BasicStroke(5));
         g.setColor(Color.BLACK);
         if (name != null) {
-            System.out.println(name);
             g.drawString(name, (x + getWidth() / 2 ) * SQUARE_SIZE, (y2 - getHeight() / 2) * SQUARE_SIZE);
         }
         g.drawRect(x * SQUARE_SIZE, y * SQUARE_SIZE, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
@@ -38,11 +36,14 @@ public class Chunk {
 
     @Override
     public String toString() {
-        return "Chunk{" +
-                "x=" + x +
-                ", y=" + y +
-                ", x2=" + x2 +
+        return getClass().getSimpleName() + "{" +
+                "name='" + name + '\'' +
                 ", y2=" + y2 +
+                ", x2=" + x2 +
+                ", y=" + y +
+                ", x=" + x +
+                ", width=" + getWidth() +
+                ", height=" + getHeight() +
                 '}';
     }
 
