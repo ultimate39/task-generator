@@ -1,6 +1,8 @@
 package com.galt.java.taskgenerator.core.model;
 
-import java.awt.*;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,10 +27,10 @@ public class Floor extends Chunk {
     }
 
     @Override
-    public void render(Graphics2D g) {
-        g.setColor(Color.BLACK);
-        g.setStroke(new BasicStroke(5));
-        g.drawRect(0, 0, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
+    public void render(GraphicsContext g) {
+        g.setStroke(Color.BLACK);
+        g.setLineWidth(5);
+        g.strokeRect(0, 0, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
 
         int index = 0;
         for(Chunk chunk : chunks) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.Main">
+   <children>
+      <Button layoutX="240.0" layoutY="44.0" mnemonicParsing="false" onAction="#onOkClick" text="Ок" />
+      <ScrollPane layoutX="16.0" layoutY="80.0" prefHeight="477.0" prefWidth="762.0">
+         <content>
+            <Canvas fx:id="canvas" height="307.0" width="561.0" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="input" layoutX="17.0" layoutY="44.0" onAction="#onOkClick" prefHeight="25.0" prefWidth="214.0" promptText="Введите номер зачетки" />
+   </children>
+</Pane>

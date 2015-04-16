@@ -4,7 +4,6 @@ import com.galt.java.taskgenerator.core.model.Block;
 import com.galt.java.taskgenerator.core.model.Chunk;
 import com.galt.java.taskgenerator.core.model.Floor;
 import com.galt.java.taskgenerator.core.model.Hall;
-import com.galt.java.taskgenerator.ui.FloorScreen;
 
 import java.util.List;
 import java.util.Random;
@@ -13,7 +12,7 @@ import java.util.Random;
  * Created by vladislav on 2/15/15.
  */
 public class Generator {
-    private final float MIN_HALlRATE = 50;
+    private final float MIN_HALlRATE = 10;
     private final int MIN_BLOCKS = 4;
     private float initHallRate = 0;
     private float minSplittableArea = 10;

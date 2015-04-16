@@ -1,5 +1,7 @@
 package com.galt.java.taskgenerator.core.model;
 
+import javafx.scene.canvas.GraphicsContext;
+
 import java.awt.*;
 
 /**
@@ -11,7 +13,7 @@ public class Room extends Chunk {
     }
 
     @Override
-    public void render(Graphics2D graphics2D) {
+    public void render(GraphicsContext graphics2D) {
 
     }
 }

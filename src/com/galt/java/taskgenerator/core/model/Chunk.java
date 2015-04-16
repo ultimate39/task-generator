@@ -1,6 +1,8 @@
 package com.galt.java.taskgenerator.core.model;
 
-import java.awt.*;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+
 
 /**
  * Created by vladislav on 2/15/15.
@@ -21,13 +23,13 @@ public class Chunk {
         this.name = name;
     }
 
-    public void render(Graphics2D g) {
-        g.setStroke(new BasicStroke(5));
-        g.setColor(Color.BLACK);
+    public void render(GraphicsContext g) {
+        g.setLineWidth(5);
+        g.setStroke(Color.BLACK);
         if (name != null) {
-            g.drawString(name, (x + getWidth() / 2 ) * SQUARE_SIZE, (y2 - getHeight() / 2) * SQUARE_SIZE);
+            g.fillText(name, (x + getWidth() / 2) * SQUARE_SIZE, (y2 - getHeight() / 2) * SQUARE_SIZE);
         }
-        g.drawRect(x * SQUARE_SIZE, y * SQUARE_SIZE, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
+        g.strokeRect(x * SQUARE_SIZE, y * SQUARE_SIZE, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
     }
 
     public float getArea() {

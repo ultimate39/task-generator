@@ -12,9 +12,9 @@ public class App extends Application {
 
     @Override
     public void start(final Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 400, 400));
+        Parent root = FXMLLoader.load(getClass().getResource("ui/fx/view/main.fxml"));
+        primaryStage.setTitle("Генератор курсовых без регистраций и смс!!!!!");
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
