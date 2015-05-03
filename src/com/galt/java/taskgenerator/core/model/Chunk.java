@@ -19,6 +19,7 @@ public class Chunk {
     }
 
     String name;
+
     public void setName(String name) {
         this.name = name;
     }
@@ -55,5 +56,21 @@ public class Chunk {
 
     public int getHeight() {
         return Math.abs(y2 - y);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Chunk) {
+            Chunk c = (Chunk) obj;
+            return x == c.x &&
+                    y == c.y &&
+                    x2 == c.x2 &&
+                    y2 == c.y2;
+        }
+        return this == obj;
+    }
+
+    public boolean contains(Point point) {
+        return point.x < x2 && point.x > x && point.y > y && point.y < y2;
     }
 }

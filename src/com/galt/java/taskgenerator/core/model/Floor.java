@@ -4,6 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -15,14 +16,16 @@ public class Floor extends Chunk {
     private List<Hall> halls;
     private List<Block> blocks;
     private List<Chunk> chunks;
+    private List<Door> doors;
 
     public Floor(int width, int height) {
         super(0, 0, width, height);
         field = new int[height][width];
-        rooms = new ArrayList<Room>();
-        halls = new ArrayList<Hall>();
-        blocks = new ArrayList<Block>();
-        chunks = new ArrayList<Chunk>();
+        rooms = new ArrayList<>();
+        halls = new ArrayList<>();
+        blocks = new ArrayList<>();
+        chunks = new ArrayList<>();
+        doors = new ArrayList<>();
         chunks.add(new Chunk(0, 0, width, height));
     }
 
@@ -35,7 +38,7 @@ public class Floor extends Chunk {
         int index = 0;
         for(Chunk chunk : chunks) {
             index++;
-            chunk.setName("C" + index);
+          //  chunk.setName("C" + index);
             chunk.render(g);
         }
 
@@ -43,6 +46,18 @@ public class Floor extends Chunk {
             index++;
             block.setName("B" + index);
             block.render(g);
+        }
+
+        index = 0;
+
+        for(Room room : rooms) {
+            index++;
+            room.setName("R" + index);
+            room.render(g);
+        }
+
+        for(Door door : doors) {
+            door.render(g);
         }
 
         System.out.println(toString());
@@ -72,6 +87,10 @@ public class Floor extends Chunk {
         return halls;
     }
 
+    public List<Door> getDoors() {
+        return doors;
+    }
+
     public float getHallArea() {
         float hallArea = 0;
         for (Hall hall : halls) {
@@ -92,5 +111,20 @@ public class Floor extends Chunk {
                 ", blocks=" + blocks +
                 ", chunks=" + chunks +
                 '}';
+    }
+
+    public void sortBlocksByArea() {
+        blocks.sort(new Comparator<Block>() {
+            @Override
+            public int compare(Block o1, Block o2) {
+                if(o1.getArea() > o2.getArea()) {
+                    return 1;
+                } else if(o1.getArea() < o2.getArea()) {
+                    return 0;
+                } else {
+                    return 0;
+                }
+            }
+        });
     }
 }
