@@ -22,10 +22,8 @@ public class Main {
     private TextField input;
 
     App app;
-
     public void setApp(App mainApp) {
         this.app = mainApp;
-
         // Add observable list data to the table
     }
 

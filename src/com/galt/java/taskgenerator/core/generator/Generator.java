@@ -28,6 +28,7 @@ public class Generator {
         Floor floor = new Floor(width, height);
         toBlocks(floor);
         initHallRate = MIN_HALlRATE;
+
         System.out.println(floor.toString());
         return floor;
     }
@@ -42,7 +43,7 @@ public class Generator {
                 floor.getChunks().remove(chunk);
             }
         }
-
+        chunksToBlocks(floor);
 /*
         if(floor.getChunks().size() < MIN_BLOCKS) {
             initHallRate += 1;
@@ -94,7 +95,6 @@ public class Generator {
                 break;
         }
     }
-
 
     private void splitChunkHorizontally(Floor floor, Chunk chunk) {
         int range = (chunk.getHeight() - MIN_DIMENSION_OF_BLOCK * 2 - 2);

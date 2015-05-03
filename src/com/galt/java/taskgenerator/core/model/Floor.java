@@ -46,11 +46,10 @@ public class Floor extends Chunk {
         }
 
         System.out.println(toString());
-/*
-        for(Hall hall : halls) {
+
+    /*    for(Hall hall : halls) {
             hall.render(g);
-        }
-*/
+        }*/
     }
 
     public int[][] getField() {

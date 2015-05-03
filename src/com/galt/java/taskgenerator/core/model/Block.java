@@ -16,7 +16,7 @@ public class Block extends Chunk {
     @Override
     public void render(GraphicsContext g) {
         g.setLineWidth(5);
-        g.setStroke(Color.BLACK);
+        g.setStroke(Color.AQUAMARINE);
         g.strokeRect(x * SQUARE_SIZE, y * SQUARE_SIZE, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
         if (name != null) {
             g.fillText(name, (x + getWidth() / 2 ) * SQUARE_SIZE, (y2 - getHeight() / 2) * SQUARE_SIZE);
