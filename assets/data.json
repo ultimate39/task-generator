@@ -1,0 +1,38 @@
+{
+  "organization": [
+    {"name" : "Школа",
+      "subdivision":[
+        {
+          "name":"Приемная",
+          "device":[{"name" : "МФУ", "count" : "1..10" }, {"name": "IP-CAMERA", "count" : "10..20"}],
+          "places":"1..10"
+        },
+        {
+          "name":"Преподавательская",
+          "device":[{"name" : "МФУ", "count" : "1..10" }, {"name": "IP-CAMERA", "count" : "10"}],
+          "places":"1..10"
+        }
+
+
+      ]},
+    {"name" : "Кафедра университета",
+      "subdivision":[
+        {
+          "name":"Приемная",
+          "device":[{"name" : "МФУ", "count" : "1..10" }, {"name": "IP-CAMERA", "count" : "13"}],
+          "places":"1..10"
+        },
+        {
+          "name":"Приемная",
+          "device":[{"name" : "МФУ", "count" : "1..10" }, {"name": "IP-CAMERA", "count" : "10"}],
+          "places":"1..10"
+        },
+
+
+      ]}
+  ],
+  "equipment": ["TP-Link", "D-Link", "Juniper", "Huawei", "CISCO", "HP"],
+  "external_lan": ["PPTP", "ADSL", "SPSL"],
+  "floors": "1..2",
+  "buildings": "1..2"
+}

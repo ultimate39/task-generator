@@ -1,4 +1,4 @@
-package com.galt.java.taskgenerator.core.model;
+package com.galt.java.taskgenerator.core.model.floor;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;

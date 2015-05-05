@@ -1,4 +1,4 @@
-package com.galt.java.taskgenerator.core.model;
+package com.galt.java.taskgenerator.core.model.floor;
 
 /**
  * Created by Grishechko on 03.05.2015.
