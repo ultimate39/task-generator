@@ -9,6 +9,8 @@ import com.google.gson.Gson;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -26,6 +28,18 @@ public class Main {
     private TextField input;
     @FXML
     private TextFlow textConditions;
+    @FXML
+    private CheckBox cbStudentTicket;
+    @FXML
+    private CheckBox cbNumberOfGroup;
+    @FXML
+    private TextField tfNumberOfGroup;
+    @FXML
+    private TextField tfVariant;
+    @FXML
+    private Button btnOkGroup;
+    @FXML
+    private Button btnOkStudentTicket;
 
     App app;
 
@@ -47,7 +61,14 @@ public class Main {
 
     @FXML
     private void onOkClick() {
-        long number = Long.parseLong(input.getText());
+        long number = -1;
+        if(cbStudentTicket.isSelected()) {
+             number = Long.parseLong(input.getText());
+        } else {
+             String numberOfGroup = tfNumberOfGroup.getText();
+             String variant = tfVariant.getText();
+             number = Long.parseLong(numberOfGroup + variant);
+        }
         Generator generator = new Generator(new Random(number));
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
@@ -55,6 +76,7 @@ public class Main {
         canvas.setWidth(floor.getWidth() * Chunk.SQUARE_SIZE);
         canvas.setHeight(floor.getHeight() * Chunk.SQUARE_SIZE);
         floor.render(gc);
+        textConditions.getChildren().clear();
         textConditions.getChildren().add(new Text(generator.generateTaskConditions().toString()));
     }
 
@@ -67,5 +89,27 @@ public class Main {
             e.printStackTrace();
         }
         return task.toString();
+    }
+
+    @FXML
+    private void onCbStudentTicketClick() {
+        input.setDisable(false);
+        cbNumberOfGroup.setSelected(false);
+        cbStudentTicket.setSelected(true);
+        tfNumberOfGroup.setDisable(true);
+        tfVariant.setDisable(true);
+        btnOkStudentTicket.setDisable(false);
+        btnOkGroup.setDisable(true);
+    }
+
+    @FXML
+    private void onCbNumberOfGroupClick() {
+        input.setDisable(true);
+        cbNumberOfGroup.setSelected(true);
+        cbStudentTicket.setSelected(false);
+        tfNumberOfGroup.setDisable(false);
+        tfVariant.setDisable(false);
+        btnOkGroup.setDisable(false);
+        btnOkStudentTicket.setDisable(true);
     }
 }

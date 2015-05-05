@@ -5,38 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc8f45e-1e26-49a8-995b-1f298c80697d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Device.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/FloorGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Organization.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/Organization.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Subdivision.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/TaskData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_2_4.xml" />
-      <change type="DELETED" beforePath="E:\workspace\task-generator\out\production\task-generator\com\galt\java\taskgenerator\core\model\Block.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace\task-generator\out\production\task-generator\com\galt\java\taskgenerator\core\model\Chunk.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace\task-generator\out\production\task-generator\com\galt\java\taskgenerator\core\model\Floor.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace\task-generator\out\production\task-generator\com\galt\java\taskgenerator\core\model\Hall.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace\task-generator\out\production\task-generator\com\galt\java\taskgenerator\core\model\Room.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/task-generator/com/galt/java/taskgenerator/core/generator/Generator.class" afterPath="$PROJECT_DIR$/out/production/task-generator/com/galt/java/taskgenerator/core/generator/Generator.class" />
-      <change type="MODIFICATION" beforePath="E:\workspace\task-generator\out\production\task-generator\com\galt\java\taskgenerator\ui\fx\view\Main.class" afterPath="E:\workspace\task-generator\out\production\task-generator\com\galt\java\taskgenerator\ui\fx\view\Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java" />
+      <change type="DELETED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\model\task\Organization.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/task-generator/com/galt/java/taskgenerator/ui/fx/view/main.fxml" afterPath="$PROJECT_DIR$/out/production/task-generator/com/galt/java/taskgenerator/ui/fx/view/main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/data.json" afterPath="$PROJECT_DIR$/assets/data.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/main.fxml" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task-generator.iml" afterPath="$PROJECT_DIR$/task-generator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\README.txt" afterPath="$PROJECT_DIR$/assets/README.txt" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\model\Block.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Block.java" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\model\Chunk.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Chunk.java" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\model\Door.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Door.java" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\model\Floor.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Floor.java" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\model\Hall.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Hall.java" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\model\Point.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Point.java" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\model\Room.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Room.java" />
     </list>
     <ignored path="task-generator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.33819953">
+              <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#778#779#0" expanded="true" />
@@ -152,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#869#870#0" expanded="true" />
@@ -162,21 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9116883">
-              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Organization.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/Organization.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -253,8 +216,8 @@
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Organization.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" />
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java" />
         <option value="$PROJECT_DIR$/assets/data.json" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java" />
       </list>
     </option>
   </component>
@@ -374,10 +337,6 @@
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uitls" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -462,32 +421,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="taskgenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -752,7 +685,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="780" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1209,10 +1142,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
           <folding>
-            <marker date="1430861611947" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430861611947" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430861611947" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1430861611947" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430863444336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430863444336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430863444336" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430863444336" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1253,14 +1186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/Organization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1279,17 +1204,6 @@
             <element signature="e#834#835#0" expanded="true" />
             <element signature="e#888#889#0" expanded="true" />
             <element signature="e#934#935#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1337,12 +1251,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1350,7 +1265,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#869#870#0" expanded="true" />
@@ -1361,9 +1276,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9116883">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33819953">
+          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
