@@ -12,7 +12,9 @@ public class Organization {
     private String name;
     @SerializedName("subdivision")
     @Expose
-    private List<Subdivision> subdivisions = new ArrayList<Subdivision>();
+    private List<Subdivision> subdivisions = new ArrayList<>();
+    @SerializedName("resources")
+    private List<String> resources = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -26,15 +28,28 @@ public class Organization {
         return subdivisions;
     }
 
+    public List<String> getResources() {
+        return resources;
+    }
+
     public void setSubdivision(List<Subdivision> subdivision) {
         this.subdivisions = subdivision;
+    }
+
+    public void setSubdivisions(List<Subdivision> subdivisions) {
+        this.subdivisions = subdivisions;
+    }
+
+    public void setResources(List<String> resources) {
+        this.resources = resources;
     }
 
     @Override
     public String toString() {
         return "Organization{" +
                 "name='" + name + '\'' +
-                ", subdivision=" + subdivisions +
+                ", subdivisions=" + subdivisions +
+                ", resources=" + resources +
                 '}';
     }
 }

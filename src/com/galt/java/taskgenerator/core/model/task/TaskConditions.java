@@ -35,6 +35,24 @@ public class TaskConditions extends TaskData {
         this.externalLan = externalLan;
     }
 
+    public int getPlaces() {
+        int places = 0;
+        for(Subdivision subdivision : organization.getSubdivisions()) {
+            places += Integer.valueOf(subdivision.getPlaces());
+        }
+        return places;
+    }
+
+    public int getDevices(){
+        int devices = 0;
+        for(Subdivision subdivision : organization.getSubdivisions()) {
+            for(Device device : subdivision.getDevices()) {
+                devices += Integer.valueOf(device.getCount());
+            }
+        }
+        return devices;
+    }
+
     @Override
     public String toString() {
         return "TaskConditions{" +

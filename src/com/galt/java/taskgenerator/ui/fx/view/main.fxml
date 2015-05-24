@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.Main">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.Main">
    <children>
       <Button fx:id="btnOkStudentTicket" layoutX="240.0" layoutY="44.0" mnemonicParsing="false" onAction="#onOkClick" text="Ок" />
       <ScrollPane layoutX="16.0" layoutY="80.0" prefHeight="408.0" prefWidth="762.0">
@@ -15,11 +15,15 @@
          </content>
       </ScrollPane>
       <TextField fx:id="input" layoutX="17.0" layoutY="44.0" onAction="#onOkClick" prefHeight="25.0" prefWidth="214.0" promptText="Введите номер зачетки" />
-      <TextFlow fx:id="textConditions" layoutX="16.0" layoutY="512.0" prefHeight="164.0" prefWidth="746.0" />
       <CheckBox fx:id="cbStudentTicket" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#onCbStudentTicketClick" selected="true" text="Номер зачетки" />
       <CheckBox fx:id="cbNumberOfGroup" layoutX="341.0" layoutY="14.0" mnemonicParsing="false" onAction="#onCbNumberOfGroupClick" text="Номер группы и варианта" />
       <TextField fx:id="tfNumberOfGroup" disable="true" layoutX="339.0" layoutY="44.0" promptText="Введите номер группы" />
       <TextField fx:id="tfVariant" disable="true" layoutX="505.0" layoutY="44.0" promptText="Введите номер варианта" />
       <Button fx:id="btnOkGroup" disable="true" layoutX="664.0" layoutY="44.0" mnemonicParsing="false" onAction="#onOkClick" text="Ok" />
+      <ScrollPane layoutX="14.0" layoutY="502.0" prefHeight="235.0" prefWidth="762.0">
+         <content>
+            <TextFlow fx:id="textConditions" prefHeight="230.0" prefWidth="759.0" />
+         </content>
+      </ScrollPane>
    </children>
 </Pane>

@@ -7,15 +7,14 @@ import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-@Generated("org.jsonschema2pojo")
 public class TaskData {
     @Expose
-    private List<Organization> organization = new ArrayList<Organization>();
+    private List<Organization> organization = new ArrayList<>();
     @Expose
-    private List<String> equipment = new ArrayList<String>();
+    private List<String> equipment = new ArrayList<>();
     @SerializedName("external_lan")
     @Expose
-    private List<String> externalLan = new ArrayList<String>();
+    private List<String> externalLan = new ArrayList<>();
     @Expose
     private String floors;
     @Expose
@@ -25,7 +24,7 @@ public class TaskData {
         return organization;
     }
 
-    public void setOrganization(List<Organization> organization) {
+    public void setOrganizations(List<Organization> organization) {
         this.organization = organization;
     }
 

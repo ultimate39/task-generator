@@ -82,6 +82,7 @@ public class TaskConditionsGenerator {
             subdivisions.add(subdivision);
         }
         organization.setSubdivision(subdivisions);
+        organization.setResources(organizationData.getResources());
         return organization;
     }
 
