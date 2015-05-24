@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.controller.TaskLoader">
+   <children>
+      <TextField fx:id="password" layoutX="21.0" layoutY="21.0" onKeyTyped="#onPasswordTyped" promptText="Введите пароль" />
+      <TextArea fx:id="textArea" disable="true" layoutX="21.0" layoutY="55.0" prefHeight="296.0" prefWidth="383.0" promptText="Вставьте новый JSON" />
+      <Button fx:id="ok" layoutX="177.0" layoutY="21.0" mnemonicParsing="false" onAction="#onOkClick" text="Ок" />
+      <Button fx:id="loadJson" disable="true" layoutX="14.0" layoutY="364.0" mnemonicParsing="false" onAction="#onLoadJsonClick" prefHeight="25.0" prefWidth="118.0" text="Загрузить JSON" />
+      <Text fx:id="jsonLoadStatus" layoutX="147.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+   </children>
+</Pane>

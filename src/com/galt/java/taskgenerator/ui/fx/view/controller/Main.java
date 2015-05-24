@@ -1,4 +1,5 @@
 package com.galt.java.taskgenerator.ui.fx.view.controller;
+import com.galt.java.taskgenerator.App;
 import com.galt.java.taskgenerator.core.generator.Generator;
 import com.galt.java.taskgenerator.core.model.floor.Chunk;
 import com.galt.java.taskgenerator.core.model.floor.Floor;
@@ -8,12 +9,12 @@ import com.galt.java.taskgenerator.core.model.pojo.TaskData;
 import com.galt.java.taskgenerator.core.model.task.TaskConditions;
 import com.galt.java.taskgenerator.core.uitls.Logger;
 import com.google.gson.Gson;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -28,28 +29,38 @@ import java.util.Random;
 public class Main {
     @FXML
     private Canvas floorOne;
-
     @FXML
     private Canvas floorTwo;
-
     @FXML
     private Tab tabTwo;
-
     @FXML
     private TabPane tabs;
-
     @FXML
     private TextFlow textConditions;
-
     @FXML
     private TextField tfNumberOfGroup;
-
     @FXML
     private TextField tfVariant;
+    @FXML
+    private Menu loadJson;
+
+    private App app;
+
 
     @FXML
     private void initialize() {
-        //Nothing
+        loadJson.setGraphic(
+                ButtonBuilder.create()
+                        .text("Загрузить условия заданий")
+                        .onAction(new EventHandler<ActionEvent>(){
+                            @Override public void handle(ActionEvent t) {
+                                app.showLoadTaskDataDialog();
+                            } })
+                        .build());
+    }
+
+    public void setApp(App app) {
+        this.app = app;
     }
 
     @FXML
@@ -160,5 +171,10 @@ public class Main {
                 externalLsn, lan,
                 floors, floorsCounts,
                 buildings, buildingsCount);
+    }
+
+    @FXML
+    private void onLoadJsonClick() {
+        app.showLoadTaskDataDialog();
     }
 }
