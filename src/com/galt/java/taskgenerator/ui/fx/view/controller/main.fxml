@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="815.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.controller.Main">
+   <children>
+      <TextField fx:id="tfNumberOfGroup" layoutX="14.0" layoutY="33.0" promptText="Введите номер группы" />
+      <TextField fx:id="tfVariant" layoutX="180.0" layoutY="33.0" promptText="Введите номер варианта" />
+      <Button fx:id="btnOkGroup" layoutX="339.0" layoutY="33.0" mnemonicParsing="false" onAction="#onOkClick" text="Ok" />
+      <ScrollPane layoutX="14.0" layoutY="539.0" prefHeight="262.0" prefWidth="849.0">
+         <content>
+            <TextFlow fx:id="textConditions" prefHeight="255.0" prefWidth="840.0" />
+         </content>
+      </ScrollPane>
+      <TabPane fx:id="tabs" layoutX="11.0" layoutY="80.0" prefHeight="447.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="1 этаж">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="849.0">
+                     <children>
+                        <ScrollPane layoutX="3.0" layoutY="3.0" prefHeight="415.0" prefWidth="839.0">
+                           <content>
+                              <Canvas fx:id="floorOne" height="388.0" width="833.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabTwo" text="2 этаж">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="415.0" prefWidth="839.0">
+                           <content>
+                              <Canvas fx:id="floorTwo" height="388.0" width="833.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

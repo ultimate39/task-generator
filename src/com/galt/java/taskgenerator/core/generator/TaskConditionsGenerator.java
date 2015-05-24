@@ -5,12 +5,15 @@ import com.galt.java.taskgenerator.core.model.pojo.Organization;
 import com.galt.java.taskgenerator.core.model.pojo.Subdivision;
 import com.galt.java.taskgenerator.core.model.pojo.TaskData;
 import com.galt.java.taskgenerator.core.model.task.TaskConditions;
+import com.galt.java.taskgenerator.core.uitls.CryptoUtils;
 import com.galt.java.taskgenerator.core.uitls.Logger;
 import com.google.gson.Gson;
+import com.google.gson.annotations.Expose;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -19,18 +22,19 @@ import java.util.Random;
  * Created by Grishechko on 05.05.2015.
  */
 public class TaskConditionsGenerator {
-    private final String DATA_PATH = "assets/data.json";
+    private final String DATA_PATH = "assets/data.dat";
     private Random random;
     private TaskData taskData;
+    private String data;
 
     public TaskConditionsGenerator(Random random) {
         this.random = random;
     }
 
-    public TaskConditions generateTaskConditions() {
+    public TaskConditions generateTaskConditions(String data) throws Exception {
         TaskConditions taskConditions = new TaskConditions();
 
-        taskData = getTaskData();
+        taskData = getTaskData(data);
 
         int positionOfOrganization = random.nextInt(taskData.getOrganizations().size());
         Organization organizationData = taskData.getOrganizations().get(positionOfOrganization);
@@ -52,13 +56,10 @@ public class TaskConditionsGenerator {
         return taskConditions;
     }
 
-    public TaskData getTaskData() {
-        File file = new File(DATA_PATH);
-        TaskData taskData = null;
-        try {
-            taskData = new Gson().fromJson(new FileReader(file), TaskData.class);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+    public TaskData getTaskData(String data) throws Exception {
+        taskData = new Gson().fromJson(data, TaskData.class);
+        if(taskData == null) {
+                throw new NullPointerException("Invalid JSON!");
         }
         return taskData;
     }

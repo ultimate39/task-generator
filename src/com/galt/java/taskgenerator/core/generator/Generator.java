@@ -2,7 +2,10 @@ package com.galt.java.taskgenerator.core.generator;
 
 import com.galt.java.taskgenerator.core.model.floor.Floor;
 import com.galt.java.taskgenerator.core.model.task.TaskConditions;
+import com.galt.java.taskgenerator.core.uitls.CryptoUtils;
 
+import java.io.File;
+import java.io.StringReader;
 import java.util.Random;
 
 /**
@@ -21,7 +24,11 @@ public class Generator {
         return floorGenerator.generateFloor(width, height);
     }
 
-    public TaskConditions generateTaskConditions() {
-        return taskConditionsGenerator.generateTaskConditions();
+    public TaskConditions generateTaskConditions() throws Exception {
+        return taskConditionsGenerator.generateTaskConditions(CryptoUtils.decrypt(new File("assets/data.dat")));
+    }
+
+    public TaskConditions generateTaskConditions(String data) throws Exception {
+        return taskConditionsGenerator.generateTaskConditions(data);
     }
 }
