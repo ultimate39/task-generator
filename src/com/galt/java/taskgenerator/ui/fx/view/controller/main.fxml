@@ -6,25 +6,25 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="848.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.controller.Main">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.controller.Main">
    <children>
       <TextField fx:id="tfNumberOfGroup" layoutX="17.0" layoutY="66.0" promptText="Введите номер группы" />
-      <TextField fx:id="tfVariant" layoutX="183.0" layoutY="66.0" promptText="Введите номер варианта" />
-      <Button fx:id="btnOkGroup" layoutX="342.0" layoutY="66.0" mnemonicParsing="false" onAction="#onOkClick" text="Ok" />
-      <ScrollPane layoutX="17.0" layoutY="572.0" prefHeight="262.0" prefWidth="849.0">
+      <TextField fx:id="tfVariant" layoutX="179.0" layoutY="66.0" prefHeight="25.0" prefWidth="158.0" promptText="Введите номер варианта" />
+      <Button fx:id="btnOkGroup" layoutX="350.0" layoutY="66.0" mnemonicParsing="false" onAction="#onOkClick" text="Ok" />
+      <ScrollPane layoutX="17.0" layoutY="427.0" prefHeight="120.0" prefWidth="849.0">
          <content>
-            <TextFlow fx:id="textConditions" prefHeight="255.0" prefWidth="840.0" />
+            <TextFlow fx:id="textConditions" prefHeight="117.0" prefWidth="839.0" />
          </content>
       </ScrollPane>
-      <TabPane fx:id="tabs" layoutX="14.0" layoutY="113.0" prefHeight="447.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabs" layoutX="14.0" layoutY="119.0" prefHeight="301.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="1 этаж">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="849.0">
                      <children>
-                        <ScrollPane layoutX="3.0" layoutY="3.0" prefHeight="415.0" prefWidth="839.0">
+                        <ScrollPane layoutX="3.0" layoutY="3.0" prefHeight="264.0" prefWidth="839.0">
                            <content>
-                              <Canvas fx:id="floorOne" height="388.0" width="833.0" />
+                              <Canvas fx:id="floorOne" height="260.0" width="836.0" />
                            </content>
                         </ScrollPane>
                      </children>
@@ -48,7 +48,11 @@
       </TabPane>
       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="879.0">
         <menus>
-          <Menu fx:id="loadJson" mnemonicParsing="false" onAction="#onLoadJsonClick" />
+          <Menu mnemonicParsing="false" text="Дополнительно">
+            <items>
+              <MenuItem fx:id="itemLoadTask" mnemonicParsing="false" onAction="#onLoadJsonClick" text="Загрузить условие задания" />
+            </items>
+          </Menu>
         </menus>
       </MenuBar>
    </children>

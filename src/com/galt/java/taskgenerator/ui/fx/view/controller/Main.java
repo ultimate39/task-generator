@@ -42,21 +42,14 @@ public class Main {
     @FXML
     private TextField tfVariant;
     @FXML
-    private Menu loadJson;
+    private MenuItem itemLoadTask;
 
     private App app;
 
 
     @FXML
     private void initialize() {
-        loadJson.setGraphic(
-                ButtonBuilder.create()
-                        .text("Загрузить условия заданий")
-                        .onAction(new EventHandler<ActionEvent>(){
-                            @Override public void handle(ActionEvent t) {
-                                app.showLoadTaskDataDialog();
-                            } })
-                        .build());
+
     }
 
     public void setApp(App app) {
