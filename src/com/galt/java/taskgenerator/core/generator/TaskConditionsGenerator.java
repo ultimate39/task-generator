@@ -16,7 +16,6 @@ import java.util.Random;
  * Created by Grishechko on 05.05.2015.
  */
 public class TaskConditionsGenerator {
-    private final String DATA_PATH = "assets/data.dat";
     private Random random;
     private TaskData taskData;
     private String data;
@@ -27,14 +26,13 @@ public class TaskConditionsGenerator {
 
     public TaskConditions generateTaskConditions(String data) throws Exception {
         TaskConditions taskConditions = new TaskConditions();
-
         taskData = getTaskData(data);
 
         int positionOfOrganization = random.nextInt(taskData.getOrganizations().size());
         Organization organizationData = taskData.getOrganizations().get(positionOfOrganization);
         taskConditions.setOrganization(generateOrganization(organizationData));
 
-        taskConditions.setBuildings(getRandomInRange(taskData.getBuildings()));
+        taskConditions.setBuildings(getIntRandomInRange(taskData.getBuildings()));
         if (taskConditions.getBuildings().equals("1")) {
             taskConditions.setFloors("2");
         } else {
@@ -47,6 +45,11 @@ public class TaskConditionsGenerator {
         int positionOfExternalLan = random.nextInt(taskData.getExternalLans().size());
         taskConditions.setExternalLan(taskData.getExternalLans().get(positionOfExternalLan));
         Logger.d(taskData.toString());
+        //Sizes for floor
+        int width =  Integer.valueOf(getIntRandomInRange(taskData.getSizeWidth()));
+        int height = Math.round(width * getFloatRandomInRange(taskData.getSizeHeightFactor()));
+        taskConditions.setWidth(width);
+        taskConditions.setHeight(height);
         return taskConditions;
     }
 
@@ -68,10 +71,10 @@ public class TaskConditionsGenerator {
             for(Device deviceData : subdivisionData.getDevices()) {
                 Device device = new Device();
                 device.setName(deviceData.getName());
-                device.setCount(getRandomInRange(deviceData.getCount()));
+                device.setCount(getIntRandomInRange(deviceData.getCount()));
                 devices.add(device);
             }
-            subdivision.setPlaces(getRandomInRange(subdivisionData.getPlaces()));
+            subdivision.setPlaces(getIntRandomInRange(subdivisionData.getPlaces()));
             subdivision.setDevices(devices);
             subdivision.setName(subdivisionData.getName());
             subdivisions.add(subdivision);
@@ -85,7 +88,7 @@ public class TaskConditionsGenerator {
      *
      * @param range in format "number_from..number_to" or "number"
      */
-    private String getRandomInRange(String range) {
+    private String getIntRandomInRange(String range) {
         Logger.d("Range:" + range);
         String[] ranges = range.split("\\.\\.");
         int from = Integer.valueOf(ranges[0]);
@@ -94,6 +97,18 @@ public class TaskConditionsGenerator {
             return String.valueOf(random.nextInt(to - from + 1) + from);
         } else {
             return String.valueOf(from);
+        }
+    }
+
+    private float getFloatRandomInRange(String range) {
+        Logger.d("Float Range:" + range);
+        String[] ranges = range.split("\\.\\.");
+        float from = Float.valueOf(ranges[0]);
+        float to = ranges.length > 1 ? Float.valueOf(ranges[1]) : -1;
+        if(to != -1) {
+            return from + (to - from) * random.nextFloat();
+        } else {
+            return from;
         }
     }
 }

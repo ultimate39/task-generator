@@ -10,6 +10,8 @@ public class TaskConditions extends TaskData {
     private Organization organization;
     private String equipment;
     private String externalLan;
+    private int width;
+    private int height;
 
     public com.galt.java.taskgenerator.core.model.pojo.Organization getOrganization() {
         return organization;
@@ -51,6 +53,22 @@ public class TaskConditions extends TaskData {
             }
         }
         return devices;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override

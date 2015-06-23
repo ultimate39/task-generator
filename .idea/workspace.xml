@@ -6,24 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" line="85" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" line="88" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc8f45e-1e26-49a8-995b-1f298c80697d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/utils/ImageUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/task-generator/com/galt/java/taskgenerator/App.class" afterPath="$PROJECT_DIR$/out/production/task-generator/com/galt/java/taskgenerator/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/task-generator/com/galt/java/taskgenerator/core/generator/Generator.class" afterPath="$PROJECT_DIR$/out/production/task-generator/com/galt/java/taskgenerator/core/generator/Generator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Floor.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Floor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/FloorGenerator.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/FloorGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/App.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Chunk.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Chunk.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/Main.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/TaskData.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/TaskData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/TaskLoader.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/TaskLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/data.json" afterPath="$PROJECT_DIR$/assets/data.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/main.fxml" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/task_loader.fxml" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/task_loader.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\assets\it_is_not_password" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/utils/it_is_not_password" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\uitls\CryptoUtils.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/utils/CryptoUtils.java" />
-      <change type="MOVED" beforePath="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\uitls\Logger.java" afterPath="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/utils/Logger.java" />
+      <change type="MOVED" beforePath="E:\workspace\task-generator\assets\data.dat" afterPath="$PROJECT_DIR$/net-task-generator-setting.dat" />
     </list>
     <ignored path="task-generator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,31 +62,58 @@
       <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.89774436">
+              <caret line="58" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="58" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task_loader.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/task_loader.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="TaskConditions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+              <folding>
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#1543#1544#0" expanded="true" />
+                <element signature="e#1571#1572#0" expanded="true" />
+                <element signature="e#1610#1611#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1674#1675#0" expanded="true" />
+                <element signature="e#1703#1704#0" expanded="true" />
+                <element signature="e#1744#1745#0" expanded="true" />
+                <element signature="e#1780#1781#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Generator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java">
+      <file leaf-file-name="TaskData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/TaskData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="85" column="48" selection-start-line="85" selection-start-column="48" selection-end-line="85" selection-end-column="48" />
+              <folding>
+                <element signature="e#1619#1620#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
+                <element signature="e#1701#1702#0" expanded="true" />
+                <element signature="e#1743#1744#0" expanded="true" />
+                <element signature="e#1786#1787#0" expanded="true" />
+                <element signature="e#1825#1826#0" expanded="true" />
+                <element signature="e#1889#1890#0" expanded="true" />
+                <element signature="e#1945#1946#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Organization.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Organization.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -95,7 +123,27 @@
         <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/TaskLoader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+              <caret line="86" column="46" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Generator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="net-task-generator-setting.dat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/net-task-generator-setting.dat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -105,27 +153,17 @@
         <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <caret line="106" column="44" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CryptoUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/utils/CryptoUtils.java">
+      <file leaf-file-name="Chunk.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Chunk.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.dat" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/data.dat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -135,33 +173,8 @@
         <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <element signature="e#7602#7603#0" expanded="true" />
-                <element signature="e#7646#7647#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+              <caret line="155" column="57" selection-start-line="155" selection-start-column="57" selection-end-line="155" selection-end-column="57" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/utils/ImageUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -186,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/gui/MainScreen.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/gui/App.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/Main.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/test.form" />
@@ -213,30 +225,31 @@
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Task.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/Range.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/Organization.java" />
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/main.fxml" />
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/TaskData.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Organization.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/FloorGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/TaskLoader.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/task_loader.fxml" />
         <option value="$PROJECT_DIR$/assets/it_is_not_password" />
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" />
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/App.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/task-generator.xml" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/uitls/Stream.java" />
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/uitls/CryptoUtils.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/main.fxml" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Floor.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/uitls/ImageUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/TaskLoader.java" />
-        <option value="$PROJECT_DIR$/assets/data.json" />
         <option value="$PROJECT_DIR$/assets/data.dat" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/utils/CryptoUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Chunk.java" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/App.java" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/TaskLoader.java" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/TaskData.java" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" />
+        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/Main.java" />
+        <option value="$PROJECT_DIR$/assets/data.json" />
       </list>
     </option>
   </component>
@@ -252,7 +265,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1692" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
     <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -394,6 +408,10 @@
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="task" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -491,20 +509,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task-generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -571,8 +575,8 @@
       <recent name="$PROJECT_DIR$/src/com/galt/java/taskgenerator" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\uitls" />
       <recent name="E:\workspace\task-generator" />
+      <recent name="E:\workspace\task-generator\src\com\galt\java\taskgenerator\core\uitls" />
       <recent name="E:\workspace\task-generator\src\com\galt\java\taskgenerator" />
       <recent name="E:\workspace\task-generator\src\com\galt\java\taskgenerator\ui\fx\view\controller" />
       <recent name="E:\workspace\task-generator\assets" />
@@ -818,38 +822,44 @@
       <option name="project" value="LOCAL" />
       <updated>1433679807563</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changes">
+      <created>1435049531303</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1435049531303</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1692" height="1026" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32513967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19574945" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliGuard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18014705" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1797066" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662192" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940617" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3914989" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940617" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3914989" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32513967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19574945" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662192" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1117,30 +1127,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/FloorGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="243" column="33" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Chunk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="e#1356#1357#0" expanded="true" />
-            <element signature="e#1395#1396#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,25 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/TaskData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Subdivision.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1196,17 +1168,6 @@
           <folding>
             <element signature="e#493#494#0" expanded="true" />
             <element signature="e#522#523#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Organization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1224,8 +1185,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding>
-            <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="false" />
+            <element signature="e#259#260#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1234,14 +1195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Floor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1267,57 +1220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/TaskLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#7602#7603#0" expanded="true" />
-            <element signature="e#7646#7647#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/data.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/utils/CryptoUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1326,10 +1228,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/data.json">
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Floor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Organization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="44" selection-start-line="106" selection-start-column="44" selection-end-line="106" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/floor/Chunk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/TaskData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="48" selection-start-line="85" selection-start-column="48" selection-end-line="85" selection-end-column="48" />
+          <folding>
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1701#1702#0" expanded="true" />
+            <element signature="e#1743#1744#0" expanded="true" />
+            <element signature="e#1786#1787#0" expanded="true" />
+            <element signature="e#1825#1826#0" expanded="true" />
+            <element signature="e#1889#1890#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/task/TaskConditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+          <folding>
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+            <element signature="e#1571#1572#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1674#1675#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1780#1781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/TaskLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="46" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/controller/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="155" column="57" selection-start-line="155" selection-start-column="57" selection-end-line="155" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net-task-generator-setting.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.89774436">
+          <caret line="58" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="58" selection-end-column="1" />
           <folding />
         </state>
       </provider>

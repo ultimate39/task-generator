@@ -19,6 +19,10 @@ public class TaskData {
     private String floors;
     @Expose
     private String buildings;
+    @SerializedName("size_width")
+    String sizeWidth;
+    @SerializedName("size_height_factor")
+    String sizeHeightFactor;
 
     public List<Organization> getOrganizations() {
         return organization;
@@ -58,6 +62,22 @@ public class TaskData {
 
     public void setBuildings(String buildings) {
         this.buildings = buildings;
+    }
+
+    public String getSizeWidth() {
+        return sizeWidth;
+    }
+
+    public void setSizeWidth(String sizeWidth) {
+        this.sizeWidth = sizeWidth;
+    }
+
+    public String getSizeHeightFactor() {
+        return sizeHeightFactor;
+    }
+
+    public void setSizeHeightFactor(String sizeHeightFactor) {
+        this.sizeHeightFactor = sizeHeightFactor;
     }
 
     @Override

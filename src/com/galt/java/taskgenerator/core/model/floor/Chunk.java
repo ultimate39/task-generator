@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
  */
 public class Chunk {
     public int x, y, x2, y2;
-    public static final int SQUARE_SIZE = 10;
+    public static final int SQUARE_SIZE = 8;
 
     public Chunk(int x, int y, int x2, int y2) {
         this.x = x;

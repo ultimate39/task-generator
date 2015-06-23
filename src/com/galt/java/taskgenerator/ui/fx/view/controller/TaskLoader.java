@@ -79,7 +79,7 @@ public class TaskLoader {
             jsonLoadStatus.setText("Неправильный JSON!");
             return;
         }
-        CryptoUtils.encrypt(textArea.getText(), new File("assets/data.dat"));
+        CryptoUtils.encrypt(textArea.getText(), new File("net-task-generator-setting.dat"));
         jsonLoadStatus.setVisible(true);
         jsonLoadStatus.setText("JSON успешно загружен");
     }

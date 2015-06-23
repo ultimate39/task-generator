@@ -53,5 +53,7 @@
   "equipment": ["TP-Link", "D-Link", "Juniper", "Huawei", "CISCO", "HP"],
   "external_lan": ["PPTP", "ADSL", "SPSL"],
   "floors": "1..2",
-  "buildings": "1..2"
+  "buildings": "1..2",
+  "size_width": "60..70",
+  "size_height_factor": "0.4..0.9"
 }

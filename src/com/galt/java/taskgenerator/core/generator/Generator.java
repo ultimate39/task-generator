@@ -24,7 +24,7 @@ public class Generator {
     }
 
     public TaskConditions generateTaskConditions() throws Exception {
-        return taskConditionsGenerator.generateTaskConditions(CryptoUtils.decrypt(new File("assets/data.dat")));
+        return taskConditionsGenerator.generateTaskConditions(CryptoUtils.decrypt(new File("net-task-generator-setting.dat")));
     }
 
     public TaskConditions generateTaskConditions(String data) throws Exception {

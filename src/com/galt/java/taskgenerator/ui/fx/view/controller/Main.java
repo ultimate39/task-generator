@@ -106,7 +106,7 @@ public class Main {
     private void generateFormattedText(TextFlow textFlow, TaskConditions taskConditions) {
         textFlow.getChildren().clear();
         String family = "Helvetica";
-        int size = 20;
+        int size = 15;
         //Организация
         Text organization = new Text(taskConditions.getOrganization().getName() + "\n");
         organization.setFont(Font.font(family, FontWeight.BOLD, size));
@@ -150,6 +150,10 @@ public class Main {
         externalLsn.setFont(Font.font(family, FontWeight.BOLD, size));
         Text lan = new Text(taskConditions.getExternalLan() + "\n");
         lan.setFont(Font.font(family, size));
+        //Размер этажа
+        Text sizeOfFloor = new Text("Размер этажа:");
+        sizeOfFloor.setFont(Font.font(family, FontWeight.BOLD, size));
+        Text sizes = new Text(String.format("%dx%d метров \n", taskConditions.getWidth(), taskConditions.getHeight()));
         //Этажей
         Text floors = new Text("Этажей: ");
         floors.setFont(Font.font(family, FontWeight.BOLD, size));
@@ -165,6 +169,7 @@ public class Main {
                 summary,
                 informatioResources, informationResourcesItems,
                 externalLsn, lan,
+                sizeOfFloor, sizes,
                 floors, floorsCounts,
                 buildings, buildingsCount);
     }

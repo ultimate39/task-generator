@@ -24,6 +24,7 @@ public class App extends Application {
         Parent root = loader.load();
         primaryStage.setTitle("Генератор курсовых работ");
         //Parent root = FXMLLoader.load(getClass().getResource("ui/fx/view/controller/task_loader.fxml"));
+        primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
         Main main = loader.getController();
@@ -41,7 +42,7 @@ public class App extends Application {
             dialogStage.initOwner(primaryStage);
             Scene scene = new Scene(root);
             dialogStage.setScene(scene);
-
+            dialogStage.setResizable(false);
             // Show the dialog and wait until the user closes it
             dialogStage.showAndWait();
             return true;
