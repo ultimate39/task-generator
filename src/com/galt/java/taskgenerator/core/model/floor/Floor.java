@@ -38,7 +38,6 @@ public class Floor extends Chunk {
         int index = 0;
         for(Chunk chunk : chunks) {
             index++;
-          //  chunk.setName("C" + index);
             chunk.render(g);
         }
 

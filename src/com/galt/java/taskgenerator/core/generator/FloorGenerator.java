@@ -1,7 +1,7 @@
 package com.galt.java.taskgenerator.core.generator;
 
 import com.galt.java.taskgenerator.core.model.floor.*;
-import com.galt.java.taskgenerator.core.uitls.Logger;
+import com.galt.java.taskgenerator.core.utils.Logger;
 
 import java.util.List;
 import java.util.Random;

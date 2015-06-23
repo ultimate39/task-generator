@@ -5,15 +5,9 @@ import com.galt.java.taskgenerator.core.model.pojo.Organization;
 import com.galt.java.taskgenerator.core.model.pojo.Subdivision;
 import com.galt.java.taskgenerator.core.model.pojo.TaskData;
 import com.galt.java.taskgenerator.core.model.task.TaskConditions;
-import com.galt.java.taskgenerator.core.uitls.CryptoUtils;
-import com.galt.java.taskgenerator.core.uitls.Logger;
+import com.galt.java.taskgenerator.core.utils.Logger;
 import com.google.gson.Gson;
-import com.google.gson.annotations.Expose;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

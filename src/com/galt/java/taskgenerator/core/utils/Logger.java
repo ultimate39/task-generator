@@ -1,4 +1,4 @@
-package com.galt.java.taskgenerator.core.uitls;
+package com.galt.java.taskgenerator.core.utils;
 
 /**
  * Created by Grishechko on 03.05.2015.

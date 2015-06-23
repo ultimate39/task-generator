@@ -2,10 +2,9 @@ package com.galt.java.taskgenerator.core.generator;
 
 import com.galt.java.taskgenerator.core.model.floor.Floor;
 import com.galt.java.taskgenerator.core.model.task.TaskConditions;
-import com.galt.java.taskgenerator.core.uitls.CryptoUtils;
+import com.galt.java.taskgenerator.core.utils.CryptoUtils;
 
 import java.io.File;
-import java.io.StringReader;
 import java.util.Random;
 
 /**

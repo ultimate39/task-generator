@@ -7,10 +7,9 @@ import com.galt.java.taskgenerator.core.model.pojo.Device;
 import com.galt.java.taskgenerator.core.model.pojo.Subdivision;
 import com.galt.java.taskgenerator.core.model.pojo.TaskData;
 import com.galt.java.taskgenerator.core.model.task.TaskConditions;
-import com.galt.java.taskgenerator.core.uitls.Logger;
+import com.galt.java.taskgenerator.core.utils.ImageUtils;
+import com.galt.java.taskgenerator.core.utils.Logger;
 import com.google.gson.Gson;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -43,9 +42,12 @@ public class Main {
     private TextField tfVariant;
     @FXML
     private MenuItem itemLoadTask;
+    @FXML
+    private MenuItem itemExportData;
 
     private App app;
 
+    boolean isGenerated;
 
     @FXML
     private void initialize() {
@@ -85,6 +87,7 @@ public class Main {
         } else {
             tabTwo.setDisable(true);
         }
+        isGenerated = true;
         tabs.getSelectionModel().select(0);
         generateFormattedText(textConditions, generator.generateTaskConditions());
     }
@@ -164,6 +167,27 @@ public class Main {
                 externalLsn, lan,
                 floors, floorsCounts,
                 buildings, buildingsCount);
+    }
+
+    @FXML
+    private void onExportImagesClick() {
+        if(isGenerated) {
+            ImageUtils.saveImage("floor1.png", floorOne);
+            if(!tabTwo.isDisabled()) {
+                ImageUtils.saveImage("floor2.png", floorTwo);
+            }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Экспорт картинки");
+            alert.setHeaderText(null);
+            alert.setContentText("Экспорт произведен успешно!");
+            alert.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Ошибка экспорта");
+            alert.setHeaderText(null);
+            alert.setContentText("Сгененируйте сначала план здания");
+            alert.showAndWait();
+        }
     }
 
     @FXML

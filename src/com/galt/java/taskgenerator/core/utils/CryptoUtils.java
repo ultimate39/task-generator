@@ -1,10 +1,10 @@
-package com.galt.java.taskgenerator.core.uitls;
+package com.galt.java.taskgenerator.core.utils;
 
-import com.sun.security.sasl.*;
+import com.galt.java.taskgenerator.App;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.security.*;
-import java.security.Provider;
 import java.util.Arrays;
 
 import javax.crypto.BadPaddingException;
@@ -26,9 +26,11 @@ public class CryptoUtils {
     public static void encrypt(String input, File outputFile)
             throws CryptoException {
         try {
+            Charset.forName("UTF-8").encode(input);
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.ENCRYPT_MODE, buildKey());
 
+           // byte[] inputBytes = Charset.forName("UTF-8").encode(input).array();
             byte[] inputBytes = input.getBytes();
             byte[] outputBytes = cipher.doFinal(inputBytes);
 
@@ -89,11 +91,10 @@ public class CryptoUtils {
     }
 
     public static String getPassword() {
-        File file = new File("assets/it_is_not_password");
         BufferedReader reader;
         String hash = null;
         try {
-            reader = new BufferedReader(new FileReader(file));
+            reader = new BufferedReader(new InputStreamReader(App.class.getResourceAsStream("core/utils/it_is_not_password")));
             hash = reader.readLine();
         } catch (Exception e) {
             e.printStackTrace();

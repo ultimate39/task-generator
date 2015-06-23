@@ -51,6 +51,7 @@
           <Menu mnemonicParsing="false" text="Дополнительно">
             <items>
               <MenuItem fx:id="itemLoadTask" mnemonicParsing="false" onAction="#onLoadJsonClick" text="Загрузить условие задания" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExportImagesClick" text="Экспортировать план(ы) здания" />
             </items>
           </Menu>
         </menus>
