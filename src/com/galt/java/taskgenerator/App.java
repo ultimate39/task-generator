@@ -8,9 +8,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 
@@ -51,6 +54,13 @@ public class App extends Application {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public File showDirectoryChooserDialog() {
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.png");
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(extFilter);
+        return fileChooser.showSaveDialog(primaryStage);
     }
 
     public static void main(String[] args) {

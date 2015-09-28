@@ -1,4 +1,5 @@
 package com.galt.java.taskgenerator.ui.fx.view.controller;
+
 import com.galt.java.taskgenerator.App;
 import com.galt.java.taskgenerator.core.generator.Generator;
 import com.galt.java.taskgenerator.core.model.floor.Chunk;
@@ -10,14 +11,19 @@ import com.galt.java.taskgenerator.core.model.task.TaskConditions;
 import com.galt.java.taskgenerator.core.utils.ImageUtils;
 import com.galt.java.taskgenerator.core.utils.Logger;
 import com.google.gson.Gson;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.DirectoryChooser;
 
 import java.io.*;
 import java.util.Random;
@@ -49,9 +55,17 @@ public class Main {
 
     boolean isGenerated;
 
+    private ContextMenu saveMenuContext;
+
     @FXML
     private void initialize() {
-
+        saveMenuContext = new ContextMenu();
+        MenuItem saveImage = new MenuItem("Сохранить изображение как...");
+        saveMenuContext.getItems().addAll(saveImage);
+        saveImage.setOnAction(event -> {
+            File file = app.showDirectoryChooserDialog();
+            ImageUtils.saveImage(file.getAbsolutePath(), floorOne);
+        });
     }
 
     public void setApp(App app) {
@@ -90,6 +104,19 @@ public class Main {
         isGenerated = true;
         tabs.getSelectionModel().select(0);
         generateFormattedText(textConditions, generator.generateTaskConditions());
+
+        floorOne.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (event.isSecondaryButtonDown()) {
+                    showSaveImageMenu(floorOne, event);
+                }
+            }
+        });
+    }
+
+    private void showSaveImageMenu(Node node, MouseEvent mouseEvent) {
+        saveMenuContext.show(node, mouseEvent.getScreenX(), mouseEvent.getScreenY());
     }
 
     private String readText() {
@@ -176,9 +203,9 @@ public class Main {
 
     @FXML
     private void onExportImagesClick() {
-        if(isGenerated) {
+        if (isGenerated) {
             ImageUtils.saveImage("floor1.png", floorOne);
-            if(!tabTwo.isDisabled()) {
+            if (!tabTwo.isDisabled()) {
                 ImageUtils.saveImage("floor2.png", floorTwo);
             }
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
