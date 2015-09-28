@@ -19,6 +19,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -26,6 +27,7 @@ import javafx.scene.text.TextFlow;
 import javafx.stage.DirectoryChooser;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -47,6 +49,8 @@ public class Main {
     @FXML
     private TextField tfVariant;
     @FXML
+    private TextField tfCountBuildings;
+    @FXML
     private MenuItem itemLoadTask;
     @FXML
     private MenuItem itemExportData;
@@ -56,6 +60,7 @@ public class Main {
     boolean isGenerated;
 
     private ContextMenu saveMenuContext;
+    private ArrayList<Canvas> mAdditionBuildings;
 
     @FXML
     private void initialize() {
@@ -75,10 +80,34 @@ public class Main {
     @FXML
     private void onOkClick() throws Exception {
         long number;
+        if(tabs.getTabs().size() > 2) {
+            while(tabs.getTabs().size() != 2) {
+                tabs.getTabs().remove(tabs.getTabs().size()-1);
+            }
+        }
         String numberOfGroup = tfNumberOfGroup.getText();
         String variant = tfVariant.getText();
         number = Long.parseLong(numberOfGroup + variant);
         Generator generator = new Generator(new Random(number));
+        try {
+            Long count = Long.parseLong(tfCountBuildings.getText());
+            for (int i = 0; i < count; i++) {
+                AnchorPane anchorPane = new AnchorPane();
+                Canvas building = new Canvas(560, 320);
+                anchorPane.getChildren().add(building);
+
+                GraphicsContext gc = building.getGraphicsContext2D();
+                gc.clearRect(0, 0, building.getWidth(), building.getHeight());
+                Floor floor = generator.generateFloor(70, 40);
+                building.setWidth(floor.getWidth() * Chunk.SQUARE_SIZE);
+                building.setHeight(floor.getHeight() * Chunk.SQUARE_SIZE);
+                floor.render(gc);
+                tabs.getTabs().add(new Tab(String.format("Здание %d", i + 3), anchorPane));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
         TaskConditions taskConditions = generator.generateTaskConditions();
 

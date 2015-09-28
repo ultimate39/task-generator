@@ -27,7 +27,7 @@ public class App extends Application {
         Parent root = loader.load();
         primaryStage.setTitle("Генератор курсовых работ");
         //Parent root = FXMLLoader.load(getClass().getResource("ui/fx/view/controller/task_loader.fxml"));
-        primaryStage.setResizable(false);
+        //primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
         Main main = loader.getController();

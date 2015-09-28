@@ -58,5 +58,7 @@
       </MenuBar>
       <Text layoutX="17.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер группы" />
       <Text layoutX="179.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер варианта" />
+      <Text layoutX="409.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Количество этажей" />
+      <TextField fx:id="tfCountBuildings" layoutX="409.0" layoutY="66.0" prefHeight="25.0" prefWidth="173.0" promptText="Введите количество этажей" />
    </children>
 </Pane>
