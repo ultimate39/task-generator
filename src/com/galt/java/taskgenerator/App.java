@@ -4,6 +4,8 @@ import com.galt.java.taskgenerator.ui.fx.view.controller.Main;
 import com.galt.java.taskgenerator.ui.fx.view.controller.TaskLoader;
 import javafx.application.Application;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,9 +17,10 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 
-public class App extends Application {
+public class App extends Application{
     Stage primaryStage;
 
     @Override
@@ -30,8 +33,15 @@ public class App extends Application {
         //primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setMinWidth(610);
+        primaryStage.setMinHeight(600);
         Main main = loader.getController();
         main.setApp(this);
+        new Random();
+    }
+
+    public Stage getStage() {
+        return primaryStage;
     }
 
     public boolean showLoadTaskDataDialog() {
@@ -56,11 +66,16 @@ public class App extends Application {
         }
     }
 
-    public File showDirectoryChooserDialog() {
+    public File showFileChooserDialog() {
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.png");
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(extFilter);
         return fileChooser.showSaveDialog(primaryStage);
+    }
+
+    public File showDirectoryChooserDialog() {
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        return directoryChooser.showDialog(primaryStage);
     }
 
     public static void main(String[] args) {

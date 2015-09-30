@@ -6,12 +6,12 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.controller.Main">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="602.0" prefHeight="761.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.controller.Main">
    <children>
       <TextField fx:id="tfNumberOfGroup" layoutX="17.0" layoutY="66.0" promptText="Введите номер группы" />
       <TextField fx:id="tfVariant" layoutX="179.0" layoutY="66.0" prefHeight="25.0" prefWidth="158.0" promptText="Введите номер варианта" />
       <Button fx:id="btnOkGroup" layoutX="350.0" layoutY="66.0" mnemonicParsing="false" onAction="#onOkClick" text="Ok" />
-      <ScrollPane layoutX="15.0" layoutY="513.0" prefHeight="224.0" prefWidth="849.0">
+      <ScrollPane fx:id="taskPane" layoutX="15.0" layoutY="513.0" prefHeight="224.0" prefWidth="849.0">
          <content>
             <TextFlow fx:id="textConditions" prefHeight="117.0" prefWidth="839.0" />
          </content>
@@ -22,11 +22,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="849.0">
                      <children>
-                        <ScrollPane layoutX="3.0" layoutY="3.0" prefHeight="347.0" prefWidth="839.0">
-                           <content>
-                              <Canvas fx:id="floorOne" height="260.0" width="836.0" />
-                           </content>
-                        </ScrollPane>
+                        <Canvas fx:id="floorOne" height="260.0" width="836.0" />
                      </children>
                   </AnchorPane>
             </content>
@@ -35,18 +31,14 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="849.0">
                      <children>
-                        <ScrollPane prefHeight="347.0" prefWidth="839.0">
-                           <content>
-                              <Canvas fx:id="floorTwo" height="340.0" width="833.0" />
-                           </content>
-                        </ScrollPane>
+                        <Canvas fx:id="floorTwo" height="340.0" width="833.0" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
         </tabs>
       </TabPane>
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="879.0">
+      <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="879.0">
         <menus>
           <Menu mnemonicParsing="false" text="Дополнительно">
             <items>

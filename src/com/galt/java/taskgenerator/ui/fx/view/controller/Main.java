@@ -11,8 +11,8 @@ import com.galt.java.taskgenerator.core.model.task.TaskConditions;
 import com.galt.java.taskgenerator.core.utils.ImageUtils;
 import com.galt.java.taskgenerator.core.utils.Logger;
 import com.google.gson.Gson;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
@@ -24,7 +24,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import javafx.stage.DirectoryChooser;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -54,6 +53,10 @@ public class Main {
     private MenuItem itemLoadTask;
     @FXML
     private MenuItem itemExportData;
+    @FXML
+    private ScrollPane taskPane;
+    @FXML
+    private MenuBar menuBar;
 
     private App app;
 
@@ -68,41 +71,68 @@ public class Main {
         MenuItem saveImage = new MenuItem("Сохранить изображение как...");
         saveMenuContext.getItems().addAll(saveImage);
         saveImage.setOnAction(event -> {
-            File file = app.showDirectoryChooserDialog();
-            ImageUtils.saveImage(file.getAbsolutePath(), floorOne);
+            File file = app.showFileChooserDialog();
+            if (file != null) {
+                Canvas canvas = (Canvas) ((AnchorPane) tabs.getSelectionModel().getSelectedItem().getContent()).getChildren().get(0);
+                ImageUtils.saveImage(file.getAbsolutePath(), canvas);
+            }
         });
     }
 
     public void setApp(App app) {
         this.app = app;
+        app.getStage().getScene().heightProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                taskPane.setPrefHeight(taskPane.getHeight() + (newValue.intValue() - oldValue.intValue()));
+            }
+        });
+        app.getStage().getScene().widthProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                tabs.setPrefWidth(tabs.getWidth() + (newValue.intValue() - oldValue.intValue()));
+                taskPane.setPrefWidth(taskPane.getWidth() + (newValue.intValue() - oldValue.intValue()));
+                menuBar.setPrefWidth(menuBar.getWidth() + (newValue.intValue() - oldValue.intValue()));
+            }
+        });
     }
 
     @FXML
     private void onOkClick() throws Exception {
         long number;
-        if(tabs.getTabs().size() > 2) {
-            while(tabs.getTabs().size() != 2) {
-                tabs.getTabs().remove(tabs.getTabs().size()-1);
+        if (tabs.getTabs().size() > 2) {
+            while (tabs.getTabs().size() != 2) {
+                tabs.getTabs().remove(tabs.getTabs().size() - 1);
             }
         }
         String numberOfGroup = tfNumberOfGroup.getText();
         String variant = tfVariant.getText();
         number = Long.parseLong(numberOfGroup + variant);
         Generator generator = new Generator(new Random(number));
+
+        //Generate additional floors
         try {
             Long count = Long.parseLong(tfCountBuildings.getText());
-            for (int i = 0; i < count; i++) {
-                AnchorPane anchorPane = new AnchorPane();
-                Canvas building = new Canvas(560, 320);
-                anchorPane.getChildren().add(building);
+            if (count > 2) {
+                count -= 2;
+                for (int i = 0; i < count; i++) {
+                    AnchorPane anchorPane = new AnchorPane();
+                    Canvas building = new Canvas(560, 320);
+                    anchorPane.getChildren().add(building);
 
-                GraphicsContext gc = building.getGraphicsContext2D();
-                gc.clearRect(0, 0, building.getWidth(), building.getHeight());
-                Floor floor = generator.generateFloor(70, 40);
-                building.setWidth(floor.getWidth() * Chunk.SQUARE_SIZE);
-                building.setHeight(floor.getHeight() * Chunk.SQUARE_SIZE);
-                floor.render(gc);
-                tabs.getTabs().add(new Tab(String.format("Здание %d", i + 3), anchorPane));
+                    GraphicsContext gc = building.getGraphicsContext2D();
+                    gc.clearRect(0, 0, building.getWidth(), building.getHeight());
+                    Floor floor = generator.generateFloor(70, 40);
+                    building.setWidth(floor.getWidth() * Chunk.SQUARE_SIZE);
+                    building.setHeight(floor.getHeight() * Chunk.SQUARE_SIZE);
+                    floor.render(gc);
+                    building.setOnMousePressed(event -> {
+                        if (event.isSecondaryButtonDown()) {
+                            showSaveImageMenu(building, event);
+                        }
+                    });
+                    tabs.getTabs().add(new Tab(String.format("Здание %d", i + 3), anchorPane));
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -134,12 +164,15 @@ public class Main {
         tabs.getSelectionModel().select(0);
         generateFormattedText(textConditions, generator.generateTaskConditions());
 
-        floorOne.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if (event.isSecondaryButtonDown()) {
-                    showSaveImageMenu(floorOne, event);
-                }
+        floorOne.setOnMousePressed(event -> {
+            if (event.isSecondaryButtonDown()) {
+                showSaveImageMenu(floorOne, event);
+            }
+        });
+
+        floorTwo.setOnMousePressed(event -> {
+            if (event.isSecondaryButtonDown()) {
+                showSaveImageMenu(floorTwo, event);
             }
         });
     }
@@ -228,20 +261,31 @@ public class Main {
                 sizeOfFloor, sizes,
                 floors, floorsCounts,
                 buildings, buildingsCount);
+        textFlow.getAccessibleText();
     }
 
     @FXML
     private void onExportImagesClick() {
         if (isGenerated) {
-            ImageUtils.saveImage("floor1.png", floorOne);
-            if (!tabTwo.isDisabled()) {
-                ImageUtils.saveImage("floor2.png", floorTwo);
+            File file = app.showDirectoryChooserDialog();
+            if(file != null) {
+                if (tabs.getTabs().size() == 2) {
+                    ImageUtils.saveImage(file.getAbsolutePath() + "/building1.png", floorOne);
+                    if (!tabTwo.isDisabled()) {
+                        ImageUtils.saveImage(file.getAbsolutePath() + "/building2.png", floorTwo);
+                    }
+                } else {
+                    for (int tabPos = 0; tabPos < tabs.getTabs().size(); tabPos++) {
+                        Canvas canvas = (Canvas) ((AnchorPane) tabs.getTabs().get(tabPos).getContent()).getChildren().get(0);
+                        ImageUtils.saveImage(String.format("%s/building%d.png", file.getAbsolutePath(), tabPos + 1), canvas);
+                    }
+                }
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Экспорт картинки");
+                alert.setHeaderText(null);
+                alert.setContentText("Экспорт произведен успешно!");
+                alert.showAndWait();
             }
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Экспорт картинки");
-            alert.setHeaderText(null);
-            alert.setContentText("Экспорт произведен успешно!");
-            alert.showAndWait();
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Ошибка экспорта");
