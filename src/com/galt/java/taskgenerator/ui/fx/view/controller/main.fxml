@@ -13,7 +13,7 @@
       <Button fx:id="btnOkGroup" layoutX="350.0" layoutY="66.0" mnemonicParsing="false" onAction="#onOkClick" text="Ok" />
       <ScrollPane fx:id="taskPane" layoutX="15.0" layoutY="513.0" prefHeight="224.0" prefWidth="849.0">
          <content>
-            <TextFlow fx:id="textConditions" prefHeight="117.0" prefWidth="839.0" />
+            <TextFlow fx:id="textConditions" prefHeight="219.0" prefWidth="839.0" />
          </content>
       </ScrollPane>
       <TabPane fx:id="tabs" layoutX="14.0" layoutY="119.0" prefHeight="385.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE">

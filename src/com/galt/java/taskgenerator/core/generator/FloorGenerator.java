@@ -3,6 +3,8 @@ package com.galt.java.taskgenerator.core.generator;
 import com.galt.java.taskgenerator.core.model.floor.*;
 import com.galt.java.taskgenerator.core.utils.Logger;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -34,6 +36,18 @@ public class FloorGenerator {
         }
         placeWallDoor(floor);
         Logger.d("Doors size:" + floor.getDoors().size());
+        Collections.min(floor.getRooms(), new Comparator<Room>() {
+            @Override
+            public int compare(Room o1, Room o2) {
+                if (o1.getArea() < o2.getArea()) {
+                    return -1;
+                } else if (o1.getArea() == o2.getArea()) {
+                    return 0;
+                } else {
+                    return 1;
+                }
+            }
+        }).setElevator(true);
         return floor;
     }
 

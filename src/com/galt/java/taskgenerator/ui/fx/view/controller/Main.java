@@ -13,11 +13,15 @@ import com.galt.java.taskgenerator.core.utils.Logger;
 import com.google.gson.Gson;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
@@ -63,6 +67,7 @@ public class Main {
     boolean isGenerated;
 
     private ContextMenu saveMenuContext;
+    private ContextMenu copyToClipboardMenuContext;
     private ArrayList<Canvas> mAdditionBuildings;
 
     @FXML
@@ -75,6 +80,27 @@ public class Main {
             if (file != null) {
                 Canvas canvas = (Canvas) ((AnchorPane) tabs.getSelectionModel().getSelectedItem().getContent()).getChildren().get(0);
                 ImageUtils.saveImage(file.getAbsolutePath(), canvas);
+            }
+        });
+        copyToClipboardMenuContext = new ContextMenu();
+        MenuItem copyToClipboard = new MenuItem("Копировать задание в буфер обмена");
+        copyToClipboardMenuContext.getItems().add(copyToClipboard);
+        copyToClipboard.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Clipboard clipboard = Clipboard.getSystemClipboard();
+                final ClipboardContent content = new ClipboardContent();
+                StringBuilder builder = new StringBuilder();
+                for (Node node : textConditions.getChildren()) {
+                    builder.append(((Text) node).getText());
+                }
+                content.putString(builder.toString());
+                clipboard.setContent(content);
+            }
+        });
+        textConditions.setOnMousePressed(event -> {
+            if (event.isSecondaryButtonDown() && textConditions.getChildren().size() > 0) {
+                showCopyToClipboardMenu(textConditions, event);
             }
         });
     }
@@ -181,6 +207,10 @@ public class Main {
         saveMenuContext.show(node, mouseEvent.getScreenX(), mouseEvent.getScreenY());
     }
 
+    private void showCopyToClipboardMenu(Node node, MouseEvent mouseEvent) {
+        copyToClipboardMenuContext.show(node, mouseEvent.getScreenX(), mouseEvent.getScreenY());
+    }
+
     private String readText() {
         File file = new File("assets/data.json");
         TaskData task = null;
@@ -243,7 +273,7 @@ public class Main {
         Text sizeOfFloor = new Text("Размер этажа:");
         sizeOfFloor.setFont(Font.font(family, FontWeight.BOLD, size));
         Text sizes = new Text(String.format("%dx%d метров \n", taskConditions.getWidth(), taskConditions.getHeight()));
-        //Этажей
+      /*  //Этажей
         Text floors = new Text("Этажей: ");
         floors.setFont(Font.font(family, FontWeight.BOLD, size));
         Text floorsCounts = new Text(taskConditions.getFloors() + "\n");
@@ -252,15 +282,13 @@ public class Main {
         Text buildings = new Text("Зданий: ");
         buildings.setFont(Font.font(family, FontWeight.BOLD, size));
         Text buildingsCount = new Text(taskConditions.getBuildings());
-        buildingsCount.setFont(Font.font(family, size));
+        buildingsCount.setFont(Font.font(family, size));*/
         textFlow.getChildren().addAll(organization,
                 subdivisions, subdivisionsItems,
                 summary,
                 informatioResources, informationResourcesItems,
                 externalLsn, lan,
-                sizeOfFloor, sizes,
-                floors, floorsCounts,
-                buildings, buildingsCount);
+                sizeOfFloor, sizes);
         textFlow.getAccessibleText();
     }
 
@@ -268,7 +296,7 @@ public class Main {
     private void onExportImagesClick() {
         if (isGenerated) {
             File file = app.showDirectoryChooserDialog();
-            if(file != null) {
+            if (file != null) {
                 if (tabs.getTabs().size() == 2) {
                     ImageUtils.saveImage(file.getAbsolutePath() + "/building1.png", floorOne);
                     if (!tabTwo.isDisabled()) {
