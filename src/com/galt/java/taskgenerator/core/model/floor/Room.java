@@ -10,13 +10,24 @@ public class Room extends Chunk {
         super(x, y, x2, y2);
     }
 
+    //Not to draw
+    private Door door;
+
     @Override
     public void render(GraphicsContext g) {
         g.setLineWidth(5);
         g.setStroke(javafx.scene.paint.Color.BLACK);
         g.strokeRect(x * SQUARE_SIZE, y * SQUARE_SIZE, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
         if (name != null) {
-            g.fillText(name, (x + getWidth() / 2 ) * SQUARE_SIZE, (y2 - getHeight() / 2) * SQUARE_SIZE);
+            g.fillText(name, (x + getWidth() / 2) * SQUARE_SIZE, (y2 - getHeight() / 2) * SQUARE_SIZE);
         }
+    }
+
+    public Door getDoor() {
+        return door;
+    }
+
+    public void setDoor(Door door) {
+        this.door = door;
     }
 }

@@ -29,9 +29,10 @@ public class FloorGenerator {
         floor.sortBlocksByArea();
         toRooms(floor);
         initHallRate = MIN_HALlRATE;
-        for(Room room : floor.getRooms()) {
+        for (Room room : floor.getRooms()) {
             placeDoor(floor, room);
         }
+        placeWallDoor(floor);
         Logger.d("Doors size:" + floor.getDoors().size());
         return floor;
     }
@@ -85,7 +86,7 @@ public class FloorGenerator {
     private void blocksToRooms(Floor floor) {
         List<Block> blocks = floor.getBlocks();
         List<Room> rooms = floor.getRooms();
-        for(Block block : blocks) {
+        for (Block block : blocks) {
             rooms.add(new Room(block.x, block.y, block.x2, block.y2));
         }
         blocks.clear();
@@ -248,24 +249,63 @@ public class FloorGenerator {
                 doors.add(Door.bottomDoor(b));
                 Logger.d("bottom wall");
                 break;
-            } else {
-
             }
         }
-        if(beforeDoors == doors.size()) {
+        if (beforeDoors == doors.size()) {
             placeRandomDoor(floor, b);
         }
+        b.setDoor(doors.get(doors.size() - 1));
     }
+
     private void placeRandomDoor(Floor floor, Room r) {
         //Left door
-        if(r.x - 1 > 0) {
+        if (r.x - 1 > 0) {
             floor.getDoors().add(Door.leftDoor(r));
-        } else if(r.y - 1 > 0) {
+        } else if (r.y - 1 > 0) {
             floor.getDoors().add(Door.topDoor(r));
-        } else if(r.y2 + 1 < floor.y2) {
+        } else if (r.y2 + 1 < floor.y2) {
             floor.getDoors().add(Door.bottomDoor(r));
-        } else if(r.x2 + 1 < floor.x2) {
+        } else if (r.x2 + 1 < floor.x2) {
             floor.getDoors().add(Door.rightDoor(r));
+        }
+    }
+
+    //Поставить дверь к стене, которая не позволяет проходить к другой части здания
+    private void placeWallDoor(Floor floor) {
+        for (int i = 0; i < floor.getRooms().size() - 1; i++) {
+            Room roomOne = floor.getRooms().get(i);
+            Room roomTwo = floor.getRooms().get(i + 1);
+            if ((roomOne.getWidth() + roomTwo.getWidth()) == floor.getWidth()) {
+                if (roomOne.getDoor().getDoorType() != Door.DOOR_TOP && roomTwo.getDoor().getDoorType() != Door.DOOR_TOP) {
+                    floor.getDoors().add(Door.topDoor(roomOne));
+                } else if (roomOne.getDoor().getDoorType() != Door.DOOR_BOTTOM && roomTwo.getDoor().getDoorType() != Door.DOOR_BOTTOM) {
+                    floor.getDoors().add(Door.bottomDoor(roomTwo));
+                }
+            }
+            if ((roomOne.getHeight() + roomTwo.getHeight()) == floor.getHeight()) {
+                Logger.d("R" + i + " and R" + (i + 1));
+                if (roomOne.getDoor().getDoorType() != Door.DOOR_LEFT && roomTwo.getDoor().getDoorType() != Door.DOOR_LEFT) {
+                    floor.getDoors().add(Door.leftDoor(roomOne));
+                } else if (roomOne.getDoor().getDoorType() != Door.DOOR_RIGHT && roomTwo.getDoor().getDoorType() != Door.DOOR_RIGHT) {
+                    floor.getDoors().add(Door.rightDoor(roomTwo));
+                }
+            }
+            if (roomOne.getWidth() == floor.getWidth()) {
+                if (roomTwo.getDoor().getDoorType() != Door.DOOR_TOP) {
+                    floor.getDoors().add(Door.topDoor(roomTwo));
+                }
+                if (roomTwo.getDoor().getDoorType() != Door.DOOR_BOTTOM) {
+                    floor.getDoors().add(Door.bottomDoor(roomTwo));
+                }
+            }
+            if (roomTwo.getHeight() == floor.getHeight()) {
+                if (roomOne.getDoor().getDoorType() != Door.DOOR_LEFT) {
+                    floor.getDoors().add(Door.leftDoor(roomOne));
+                }
+                if (roomTwo.getDoor().getDoorType() != Door.DOOR_RIGHT) {
+                    floor.getDoors().add(Door.rightDoor(roomTwo));
+                }
+            }
         }
     }
 }

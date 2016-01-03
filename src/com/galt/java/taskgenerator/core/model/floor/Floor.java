@@ -31,17 +31,13 @@ public class Floor extends Chunk {
 
     @Override
     public void render(GraphicsContext g) {
-        g.setStroke(Color.BLACK);
-        g.setLineWidth(5);
-        g.strokeRect(0, 0, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
-
         int index = 0;
-        for(Chunk chunk : chunks) {
+        for (Chunk chunk : chunks) {
             index++;
             chunk.render(g);
         }
 
-        for(Block block : blocks) {
+        for (Block block : blocks) {
             index++;
             block.setName("B" + index);
             block.render(g);
@@ -49,18 +45,21 @@ public class Floor extends Chunk {
 
         index = 0;
 
-        for(Room room : rooms) {
+        for (Room room : rooms) {
             index++;
             room.setName("R" + index);
             room.render(g);
         }
 
-        for(Door door : doors) {
+        for (Door door : doors) {
             door.render(g);
         }
 
         System.out.println(toString());
 
+        g.setLineWidth(5);
+        g.setStroke(javafx.scene.paint.Color.BLACK);
+        g.strokeRect(0, 0, getWidth() * SQUARE_SIZE, getHeight() * SQUARE_SIZE);
     /*    for(Hall hall : halls) {
             hall.render(g);
         }*/
@@ -116,9 +115,9 @@ public class Floor extends Chunk {
         blocks.sort(new Comparator<Block>() {
             @Override
             public int compare(Block o1, Block o2) {
-                if(o1.getArea() > o2.getArea()) {
+                if (o1.getArea() > o2.getArea()) {
                     return 1;
-                } else if(o1.getArea() < o2.getArea()) {
+                } else if (o1.getArea() < o2.getArea()) {
                     return 0;
                 } else {
                     return 0;
