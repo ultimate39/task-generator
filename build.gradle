@@ -23,6 +23,15 @@ sourceSets {
     }
 }
 
+task runCustom(dependsOn: run) {
+    group 'assemble project'
+    copy {
+        from 'src/main/resources/data.dat'
+        into 'build/classes/main'
+    }
+}
+runCustom.shouldRunAfter classes
+
 task copyResources(dependsOn: installDist) {
     group = 'Assemble Project'
     doLast {
@@ -32,3 +41,4 @@ task copyResources(dependsOn: installDist) {
         }
     }
 }
+
