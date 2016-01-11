@@ -1,8 +1,10 @@
 package com.galt.java.taskgenerator.core.utils;
 
 import com.galt.java.taskgenerator.App;
+import com.sun.jndi.toolkit.url.Uri;
 
 import java.io.*;
+import java.net.URI;
 import java.nio.charset.Charset;
 import java.security.*;
 import java.util.Arrays;
@@ -22,6 +24,7 @@ public class CryptoUtils {
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES";
     public static final String PASSWORD_HASH_ALGORITHM = "SHA-1";
+    private static final String DATA_FILE_NAME = "data.dat";
 
     public static void encrypt(String input, File outputFile)
             throws CryptoException {
@@ -30,7 +33,7 @@ public class CryptoUtils {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.ENCRYPT_MODE, buildKey());
 
-           // byte[] inputBytes = Charset.forName("UTF-8").encode(input).array();
+            // byte[] inputBytes = Charset.forName("UTF-8").encode(input).array();
             byte[] inputBytes = input.getBytes();
             byte[] outputBytes = cipher.doFinal(inputBytes);
 
@@ -94,7 +97,7 @@ public class CryptoUtils {
         BufferedReader reader;
         String hash = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(App.class.getResourceAsStream("core/utils/it_is_not_password")));
+            reader = new BufferedReader(new InputStreamReader(App.class.getClassLoader().getResourceAsStream("it_is_not_password")));
             hash = reader.readLine();
         } catch (Exception e) {
             e.printStackTrace();
@@ -124,6 +127,28 @@ public class CryptoUtils {
         MessageDigest messageDigest = getMessageDigester();
         messageDigest.update(password.getBytes());
         return byteArrayToHexString(messageDigest.digest());
+    }
+
+    public static URI getPathOfData() {
+        try {
+            URI pathExecution = CryptoUtils.class.getProtectionDomain().getCodeSource().getLocation().toURI();
+            if (pathExecution.getPath().contains(".jar")) {
+                pathExecution = new URI(pathExecution.toString().substring(0, pathExecution.toString().lastIndexOf('/') + 1));
+            }
+            return new URI(String.format("%s%s", pathExecution.toString(), DATA_FILE_NAME));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static String getData() {
+        try {
+            return decrypt(new File(getPathOfData()));
+        } catch (CryptoException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 

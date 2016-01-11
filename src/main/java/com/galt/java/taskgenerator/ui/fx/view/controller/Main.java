@@ -211,17 +211,6 @@ public class Main {
         copyToClipboardMenuContext.show(node, mouseEvent.getScreenX(), mouseEvent.getScreenY());
     }
 
-    private String readText() {
-        File file = new File("assets/data.json");
-        TaskData task = null;
-        try {
-            task = new Gson().fromJson(new FileReader(file), TaskData.class);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return task.toString();
-    }
-
     private void generateFormattedText(TextFlow textFlow, TaskConditions taskConditions) {
         textFlow.getChildren().clear();
         String family = "Helvetica";

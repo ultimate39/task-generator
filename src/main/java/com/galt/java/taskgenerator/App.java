@@ -1,22 +1,23 @@
 package com.galt.java.taskgenerator;
 
+import com.galt.java.taskgenerator.core.utils.CryptoUtils;
+import com.galt.java.taskgenerator.core.utils.Logger;
 import com.galt.java.taskgenerator.ui.fx.view.controller.Main;
-import com.galt.java.taskgenerator.ui.fx.view.controller.TaskLoader;
 import javafx.application.Application;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import sun.rmi.runtime.Log;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.util.Enumeration;
 import java.util.Random;
 
 
@@ -37,7 +38,8 @@ public class App extends Application{
         primaryStage.setMinHeight(600);
         Main main = loader.getController();
         main.setApp(this);
-        new Random();
+        Logger.d((System.getProperties().getProperty("user.dir")));
+        Logger.d(CryptoUtils.getPathOfData());
     }
 
     public Stage getStage() {

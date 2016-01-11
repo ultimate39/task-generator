@@ -1,5 +1,6 @@
 package com.galt.java.taskgenerator.ui.fx.view.controller;
 
+import com.galt.java.taskgenerator.App;
 import com.galt.java.taskgenerator.core.generator.Generator;
 import com.galt.java.taskgenerator.core.model.pojo.TaskData;
 import com.galt.java.taskgenerator.core.model.task.TaskConditions;
@@ -13,6 +14,7 @@ import javafx.scene.text.Text;
 
 
 import java.io.File;
+import java.net.URISyntaxException;
 import java.util.Random;
 
 /**
@@ -41,7 +43,7 @@ public class TaskLoader {
     private void onOkClick() throws CryptoUtils.CryptoException {
         String password = CryptoUtils.getPassword();
         String hash = CryptoUtils.getSHA(this.password.getText());
-        if(password.equals(hash)) {
+        if (password.equals(hash)) {
             loadJson.setDisable(false);
             textArea.setDisable(false);
         } else {
@@ -56,19 +58,19 @@ public class TaskLoader {
 
     @FXML
     private void onPasswordTyped() {
-        if(isIncorrectPassword) {
+        if (isIncorrectPassword) {
             isIncorrectPassword = false;
             this.password.setPromptText("Введите пароль");
         }
     }
 
     @FXML
-    private void onLoadJsonClick() throws CryptoUtils.CryptoException {
+    private void onLoadJsonClick() throws CryptoUtils.CryptoException, URISyntaxException {
         Generator generator = new Generator(new Random());
         TaskConditions taskConditions = null;
         try {
             taskConditions = generator.generateTaskConditions(textArea.getText());
-            if(!isJsonValid(textArea.getText()) || taskConditions == null) {
+            if (!isJsonValid(textArea.getText()) || taskConditions == null) {
                 jsonLoadStatus.setVisible(true);
                 jsonLoadStatus.setText("Неправильный JSON!");
                 return;
@@ -79,7 +81,7 @@ public class TaskLoader {
             jsonLoadStatus.setText("Неправильный JSON!");
             return;
         }
-        CryptoUtils.encrypt(textArea.getText(), new File("net-task-generator-setting.dat"));
+        CryptoUtils.encrypt(textArea.getText(), new File(CryptoUtils.getPathOfData()));
         jsonLoadStatus.setVisible(true);
         jsonLoadStatus.setText("JSON успешно загружен");
     }
@@ -88,7 +90,7 @@ public class TaskLoader {
         try {
             new Gson().fromJson(json, TaskData.class);
             return true;
-        } catch(com.google.gson.JsonSyntaxException ex) {
+        } catch (com.google.gson.JsonSyntaxException ex) {
             ex.printStackTrace();
             return false;
         }

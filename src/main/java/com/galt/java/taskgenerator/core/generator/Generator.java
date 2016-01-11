@@ -1,5 +1,6 @@
 package com.galt.java.taskgenerator.core.generator;
 
+import com.galt.java.taskgenerator.App;
 import com.galt.java.taskgenerator.core.model.floor.Floor;
 import com.galt.java.taskgenerator.core.model.task.TaskConditions;
 import com.galt.java.taskgenerator.core.utils.CryptoUtils;
@@ -24,7 +25,7 @@ public class Generator {
     }
 
     public TaskConditions generateTaskConditions() throws Exception {
-        return taskConditionsGenerator.generateTaskConditions(CryptoUtils.decrypt(new File("net-task-generator-setting.dat")));
+        return taskConditionsGenerator.generateTaskConditions(CryptoUtils.getData());
     }
 
     public TaskConditions generateTaskConditions(String data) throws Exception {
