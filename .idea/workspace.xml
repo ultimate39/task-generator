@@ -9,12 +9,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/galt/java/taskgenerator/core/generator/TaskConditionsGenerator.java" line="88" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc8f45e-1e26-49a8-995b-1f298c80697d" name="Default" comment="Added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew.bat" />
+    <list default="true" id="5bc8f45e-1e26-49a8-995b-1f298c80697d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
     </list>
     <ignored path="task-generator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -167,7 +164,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -177,11 +174,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2592592">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -644,7 +641,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/core/model/pojo/Organization.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/Main.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/TaskLoader.java" />
         <option value="$PROJECT_DIR$/src/com/galt/java/taskgenerator/ui/fx/view/task_loader.fxml" />
@@ -694,6 +690,7 @@
         <option value="C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/net/URLStreamHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/galt/java/taskgenerator/core/utils/CryptoUtils.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -1322,7 +1319,19 @@
       <option name="project" value="LOCAL" />
       <updated>1452547268720</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added ignore">
+      <created>1452547323698</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1452547323698</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added ignore">
+      <created>1452547406010</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1452547406010</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1410,7 +1419,8 @@
     <MESSAGE value="Fixed bug with root" />
     <MESSAGE value="Floors -&gt; buildings" />
     <MESSAGE value="Added gradle support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added gradle support" />
+    <MESSAGE value="Added ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1994,18 +2004,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2592592">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
