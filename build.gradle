@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+compileJava.options.encoding = 'UTF-8'
+mainClassName = 'com.galt.java.taskgenerator.App'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.5'
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java", "src/main/resources"]
+            includes = ["**/*"]
+            excludes = ['**/*.java', 'data.json', 'README.txt']
+        }
+    }
+}
+
+task runCustom(dependsOn: run) {
+    group 'assemble project'
+    copy {
+        from 'src/main/resources/data.dat'
+        into 'build/classes/main'
+    }
+}
+runCustom.shouldRunAfter classes
+
+task copyResources(dependsOn: installDist) {
+    group = 'Assemble Project'
+    doLast {
+        copy {
+            from 'build/resources/main/data.dat'
+            into 'build/install/task-generator/lib/'
+        }
+    }
+}
+
