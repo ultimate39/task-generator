@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="602.0" prefHeight="761.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.galt.java.taskgenerator.ui.fx.view.controller.Main">
+   <children>
+      <TextField fx:id="tfNumberOfGroup" layoutX="17.0" layoutY="66.0" promptText="Введите номер группы" />
+      <TextField fx:id="tfVariant" layoutX="179.0" layoutY="66.0" prefHeight="25.0" prefWidth="158.0" promptText="Введите номер варианта" />
+      <Button fx:id="btnOkGroup" layoutX="350.0" layoutY="66.0" mnemonicParsing="false" onAction="#onOkClick" text="Ok" />
+      <ScrollPane fx:id="taskPane" layoutX="15.0" layoutY="513.0" prefHeight="224.0" prefWidth="849.0">
+         <content>
+            <TextFlow fx:id="textConditions" prefHeight="219.0" prefWidth="839.0" />
+         </content>
+      </ScrollPane>
+      <TabPane fx:id="tabs" layoutX="14.0" layoutY="119.0" prefHeight="385.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="1 здание">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="395.0" prefWidth="849.0">
+                     <children>
+                        <Canvas fx:id="floorOne" height="260.0" width="836.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabTwo" text="2 здание">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="849.0">
+                     <children>
+                        <Canvas fx:id="floorTwo" height="340.0" width="833.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="879.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Дополнительно">
+            <items>
+              <MenuItem fx:id="itemLoadTask" mnemonicParsing="false" onAction="#onLoadJsonClick" text="Загрузить условие задания" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExportImagesClick" text="Экспортировать план(ы) здания" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="17.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер группы" />
+      <Text layoutX="179.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер варианта" />
+      <Text layoutX="409.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Количество этажей" />
+      <TextField fx:id="tfCountBuildings" layoutX="409.0" layoutY="66.0" prefHeight="25.0" prefWidth="173.0" promptText="Введите количество этажей" />
+   </children>
+</Pane>

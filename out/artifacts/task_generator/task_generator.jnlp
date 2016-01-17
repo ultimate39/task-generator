@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="task_generator.jnlp">
+  <information>
+    <title>Task Generator</title>
+    <vendor>Unknown vendor</vendor>
+    <description>Sample JavaFX 2.0 application.</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="gson-2.2.4.jar" size="190418" download="eager" />
+    <jar href="task_generator.jar" size="50563" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="com.galt.java.taskgenerator.App"  name="task-generator" />
+  <update check="background"/>
+</jnlp>
